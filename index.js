@@ -46,9 +46,11 @@ function playSound(key) {
 }
 
 function makeAnimation(currentSelector) {
-  var currentButton = document.querySelector("." + currentSelector);
+  let currentButton = document.querySelector("." + currentSelector);
   currentButton.classList.add("pressed");
+  currentButton.classList.add("white");
   setTimeout(function () {
+    currentButton.classList.remove("white");
     currentButton.classList.remove("pressed");
-  }, 100);
+  }, 150);
 }
